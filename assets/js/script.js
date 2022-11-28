@@ -24,15 +24,15 @@ function writePassword() {
 
 //asks user if they want to include lowercase characters, stores answer as boolean
 function includeLowercase() {
-  var confirmLowercase = prompt("Do you want to include lowercase letters in your password? \nType Y for Yes or N for No").toUpperCase();
+  var confirmLowercase = prompt("Do you want to include lowercase letters in your password? \nType Y for Yes or N for No");
   
   if (confirmLowercase === null) {
     return;
-  } else if (confirmLowercase === "Y") {
+  } else if (confirmLowercase.toUpperCase() === "Y") {
     hasLowercase = true;
     alert("Your password will contain lowercase letters.");
     includeUppercase();
-  } else if (confirmLowercase === "N") {
+  } else if (confirmLowercase.toUpperCase() === "N") {
     hasLowercase = false;
     alert("Your password will not contain lowercase letters.");
     includeUppercase();
@@ -44,15 +44,15 @@ function includeLowercase() {
 
 //asks user if they want to include uppercase characters, stores answer as boolean
 function includeUppercase() {
-  var confirmUppercase = prompt("Do you want to include uppercase letters in your password? \nType Y for Yes or N for No").toUpperCase();
+  var confirmUppercase = prompt("Do you want to include uppercase letters in your password? \nType Y for Yes or N for No");
  
   if (confirmUppercase === null) {
     return;
-  } else if (confirmUppercase === "Y") {
+  } else if (confirmUppercase.toUpperCase() === "Y") {
     hasUppercase = true;
     alert("Your password will contain uppercase letters.");
     includeNumbers();
-  } else if (confirmUppercase === "N") {
+  } else if (confirmUppercase.toUpperCase() === "N") {
     hasUppercase = false;
     alert("Your password will not contain uppercase letters.");
     includeNumbers();
@@ -64,15 +64,15 @@ function includeUppercase() {
 
 //asks user if they want to include numbers, stores answer as boolean
  function includeNumbers() {
-  var confirmNumbers = prompt("Do you want to include numbers in your password? \nType Y for Yes or N for No").toUpperCase();
+  var confirmNumbers = prompt("Do you want to include numbers in your password? \nType Y for Yes or N for No");
   
   if (confirmNumbers === null) {
     return;
-  } else if (confirmNumbers === "Y") {
+  } else if (confirmNumbers.toUpperCase() === "Y") {
     hasNumbers = true;
     alert("Your password will contain numbers.");
     includeSpecialChars();
-  } else if (confirmNumbers === "N") {
+  } else if (confirmNumbers.toUpperCase() === "N") {
     hasNumbers = false;
     alert("Your password will not contain numbers.");
     includeSpecialChars();
@@ -84,15 +84,15 @@ function includeUppercase() {
 
  //asks user if they want to include special characters, stores answer as boolean
  function includeSpecialChars() {
-  var confirmChars = prompt("Do you want to include special characters in your password? \nType Y for Yes or N for No").toUpperCase();
+  var confirmChars = prompt("Do you want to include special characters in your password? \nType Y for Yes or N for No");
   
   if (confirmChars === null) {
     return;
-  } else if (confirmChars === "Y") {
+  } else if (confirmChars.toUpperCase() === "Y") {
     hasSpecialChars = true;
     alert("Your password will contain special characters.");
     generatePassword();
-  } else if (confirmChars === "N") {
+  } else if (confirmChars.toUpperCase() === "N") {
     hasSpecialChars = false;
     //sends the user back to includeLowercase if they have not selected one of the character types
     if ((hasLowercase === false) && (hasUppercase === false) && (hasNumbers === false) && (hasSpecialChars === false)) {
